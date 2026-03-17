@@ -550,7 +550,7 @@ static bool automouse_triggered = false;
 static void activate_automouse_layer() {
     automouse_triggered = true;
     // 修正: 第二引数に true または false を入れる
-    zmk_keymap_layer_activate(AUTOMOUSE_LAYER, true);
+    zmk_keymap_layer_activate(AUTOMOUSE_LAYER);
     k_timer_start(&automouse_layer_timer, K_MSEC(CONFIG_PMW3610_AUTOMOUSE_TIMEOUT_MS), K_NO_WAIT);
 }
 
